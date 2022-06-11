@@ -3,32 +3,45 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt && json-server --watch db.json",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:prettier",
-    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
+    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "@nuxt/webpack": "^2.15.8",
     "@nuxtjs/axios": "^5.13.6",
-    "core-js": "^3.19.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.6.14",
-    "vue-server-renderer": "^2.6.14",
-    "vue-template-compiler": "^2.6.14",
-    "webpack": "^4.46.0"
+    "@nuxtjs/babel-preset-app": "github:nuxt/babel-preset-app",
+    "core-js": "^3.22.3",
+    "source-map-url": "^0.4.1",
+    "vue": "^2.6.14"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
-    "@nuxtjs/eslint-config": "^8.0.0",
-    "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/eslint-config": "^10.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
+    "chokidar": "^3.5.3",
+    "cssnano": "^5.1.11",
+    "cssnano-preset-default": "^5.2.11",
     "eslint": "^8.4.1",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^3.1.0",
-    "eslint-plugin-vue": "^8.2.0",
-    "prettier": "^2.5.1"
+    "eslint-plugin-vue": "^9.1.0",
+    "fsevents": "^2.3.2",
+    "glob-parent": "^6.0.2",
+    "nth-check": "^2.1.1",
+    "nuxt": "^2.15.8",
+    "postcss-svgo": "^5.1.0",
+    "postcss-values-parser": "^6.0.2",
+    "prettier": "^2.6.1",
+    "svgo": "^2.8.0",
+    "url": "^0.11.0",
+    "vue-template-compiler": "^2.6.14",
+    "watchpack-chokidar2": "^2.0.1"
   }
 }
