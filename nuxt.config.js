@@ -49,6 +49,6 @@ export default {
 
   target: 'static',
   router: {
-    base: 'mutarski.github.io'
+    base: 'real-world-nuxt'
   }
 }
