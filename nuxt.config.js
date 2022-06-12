@@ -48,7 +48,5 @@ export default {
   build: {},
 
   target: 'static',
-  router: {
-    base: 'real-world-nuxt'
-  }
+  mode: 'universal',
 }
